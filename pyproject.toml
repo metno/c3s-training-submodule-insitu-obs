@@ -1,0 +1,31 @@
+[project]
+name = "ngcd"
+version = "0.1"
+authors = [
+    {name = "MET Norway", email = "post@met.no"}
+]
+description = "Code base for showing how to download and use NGCD dataset"
+keywords = ["meteorology", "forecast", ]
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Programming Language :: Python :: 3',
+    ]
+dependencies = [
+    "numpy",
+    "netCDF4",
+    "cdsapi",
+    "matplotlib",
+    "xarray",
+    "cartopy",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "jupyterlab",
+]
