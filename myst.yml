@@ -11,13 +11,13 @@ project:
   open_access: true
   exclude:
     - developer/*
-  github: ecmwf-training/jupyter-template
+  github: metno/c3s-training-submodule-insitu-obs
   thebe:
     binder:
-      repo: ecmwf-training/jupyter-template
+      repo: metno/c3s-training-submodule-insitu-obs
       provider: github
       url: https://mybinder.org
-      ref: develop
+      ref: metno-develop
   exports:
     - format: pdf
       template: plain_latex_book
@@ -30,6 +30,7 @@ project:
     - file: eobs_multiple_variables.ipynb
     - file: GRUAN_C3S_Jupyter.ipynb
     - file: eprofile_wind_profiler_analysis.ipynb
+    - file: nordic_gridded_climate_dataset.ipynb
 site:
   template: book-theme
   options:
