@@ -4,3 +4,5 @@ numpy
 matplotlib
 xarray
 cartopy
+# NetCDF backend used by xarray to read the downloaded files.
+netCDF4
