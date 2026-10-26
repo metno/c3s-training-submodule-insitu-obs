@@ -24,7 +24,7 @@ you should take to ensure that things work as expected.
 
 ### Adding notebooks and markdown content
 
-If creating a notebook please use the [Template notebook](./template-notebook) to ensure you
+If creating a notebook please use the [Template notebook](./template-notebook.ipynb) to ensure you
 are following the expected guidelines.
 Markdown content should follow a similar structure as this README.md file.
 To make the added content appear in the Jupyter Book rendered pages, you must add the content to the
@@ -160,23 +160,3 @@ also be overwritten. If you have customised pynblint rules or disabled checks in
 file, back up your changes before syncing.
 :::
 
-
-### Keep your fork up-to-date with the Upstream Repository
-
-To ensure any Pull Requests you raise are valid you should 
-regularly update your fork to the HEAD of the upstream repository.
-
-First check that the upstream repository is known to git. 
-The following may return the error `error: remote upstream already exists.`, but that
-is okay as it means you already added the upstream repo.
-
-```bash
-git remote add upstream https://github.com/ecmwf-training/c3s-training-submodule-insitu-obs.git
-```
-
-You can now fetch the latest version of the upstream repo, and merge into your branch.
-
-```bash
-git fetch upstream
-git merge upstream/develop
-```

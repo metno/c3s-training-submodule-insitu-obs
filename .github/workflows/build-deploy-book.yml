@@ -6,9 +6,9 @@ on:
   push:
     # Runs on pushes targeting the default branch
     branches: [develop]
-  # pull_request:
-  #   # Runs on pull requests targeting the default branch
-  #   branches: [develop]
+  pull_request:
+    # Runs on pull requests targeting the default branch
+    branches: [develop]
   workflow_dispatch:
 env:
   # `BASE_URL` determines, relative to the root of the domain, the URL that your site is served from.

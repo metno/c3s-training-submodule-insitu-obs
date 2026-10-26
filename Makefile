@@ -52,7 +52,7 @@ conda-env-update:
 
 .PHONY: uv-env-update
 uv-env-update:
-	uv pip install "jupyter-book>=2,<3" && uv pip install pip &&  uv pip install -r requirements.txt
+	uv pip install -q "jupyter-book>=2,<3" && uv pip install -q pip &&  uv pip install -q -r requirements.txt
 
 # ---------------------------------------------------------------------------
 # Template sync (for repositories created from this template)
@@ -96,18 +96,18 @@ qa-tools-update: ## Update the QA tools repository to the latest main
 
 .PHONY: qa-install
 qa-install: $(QA_TOOLS) ## Install QA dependencies into the active Python environment
-	cd $(QA_TOOLS) && python -m pip install . -q
+	cd $(QA_TOOLS) && python -m pip install -q .
 
 # ---------------------------------------------------------------------------
 # Individual checks
 # ---------------------------------------------------------------------------
 
 .PHONY: qa-lint
-qa-lint: ## (2.2.3) Lint code cells with ruff check
-	ruff check $(NOTEBOOKS)
+qa-lint: ## (2.2.3) Lint code cells with ruff and automatically fix issues
+	ruff check $(NOTEBOOKS) --fix
 
 .PHONY: qa-format
-qa-format: ## (2.2.3) Check code-cell formatting with ruff format
+qa-format: ## (2.2.3) Format code cells with ruff format
 	ruff format $(NOTEBOOKS)
 
 .PHONY: qa-pynblint
